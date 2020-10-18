@@ -50,4 +50,14 @@ emailToDidController.get("/private-key-from-guid/:uuid", async function (
   res.status(200).json(keyCahceValue);
 });
 
+emailToDidController.get("/generate-document-did", async function (req, res) {
+  did = await ethClient.createNewDID();
+  res.status(200).json(did);
+});
+
+emailToDidController.get("/get-txt-record/:didkey", async function (req, res) {
+  did = await ethClient.getTxtRecord(req.params.didkey);
+  res.status(200).json(did);
+});
+
 module.exports = emailToDidController;
