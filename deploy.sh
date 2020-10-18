@@ -4,7 +4,7 @@ git pull
 
 npm install
 
-pm2 stop mypass
-pm2 start app.js --name mypass
+pm2 stop emailtodid
+pm2 start app.js --name emailtodid
 
 echo ~~FINISHED~~

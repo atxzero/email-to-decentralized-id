@@ -21,8 +21,6 @@ emailToDidController.post("/generate-email-did", async function (req, res) {
 
     const keyCahceValue = { did: did, email: req.body.email };
 
-    console.log({ keyCahceValue });
-
     keyCache.set(uuid, keyCahceValue);
     emailUtil.sendEmail(req.body.email, uuid);
   } else {
