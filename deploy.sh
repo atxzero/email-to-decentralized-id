@@ -1,4 +1,4 @@
-cd ~/PROD/EMAIL-TO-DID/email-to-decentralized-id
+cd ~/EMAIL-TO-DID/email-to-decentralized-id
 
 git pull
 
